@@ -1,0 +1,5 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\14_DobleYTriple\14_DobleYTriple\obj\Debug\14_DobleYTriple.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\14_DobleYTriple\14_DobleYTriple\obj\Debug\14_DobleYTriple.pdb

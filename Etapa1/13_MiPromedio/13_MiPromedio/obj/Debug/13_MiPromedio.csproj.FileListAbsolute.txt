@@ -1,0 +1,6 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\bin\Debug\13_MiPromedio.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\bin\Debug\13_MiPromedio.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\bin\Debug\13_MiPromedio.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\obj\Debug\13_MiPromedio.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\obj\Debug\13_MiPromedio.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\13_MiPromedio\13_MiPromedio\obj\Debug\13_MiPromedio.pdb

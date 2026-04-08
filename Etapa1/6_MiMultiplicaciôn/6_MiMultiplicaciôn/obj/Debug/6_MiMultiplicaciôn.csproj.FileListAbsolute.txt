@@ -1,0 +1,5 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\6_MiMultiplicaciôn\6_MiMultiplicaciôn\bin\Debug\6_MiMultiplicaciôn.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\6_MiMultiplicaciôn\6_MiMultiplicaciôn\bin\Debug\6_MiMultiplicaciôn.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\6_MiMultiplicaciôn\6_MiMultiplicaciôn\bin\Debug\6_MiMultiplicaciôn.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\6_MiMultiplicaciôn\6_MiMultiplicaciôn\obj\Debug\6_MiMultiplicaciôn.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\6_MiMultiplicaciôn\6_MiMultiplicaciôn\obj\Debug\6_MiMultiplicaciôn.pdb

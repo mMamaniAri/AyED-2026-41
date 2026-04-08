@@ -1,0 +1,5 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\7_MiDivisiôn\7_MiDivisiôn\bin\Debug\7_MiDivisiôn.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\7_MiDivisiôn\7_MiDivisiôn\bin\Debug\7_MiDivisiôn.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\7_MiDivisiôn\7_MiDivisiôn\bin\Debug\7_MiDivisiôn.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\7_MiDivisiôn\7_MiDivisiôn\obj\Debug\7_MiDivisiôn.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\7_MiDivisiôn\7_MiDivisiôn\obj\Debug\7_MiDivisiôn.pdb

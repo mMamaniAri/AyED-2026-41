@@ -1,0 +1,6 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\bin\Debug\11_Rectangulo.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\bin\Debug\11_Rectangulo.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\bin\Debug\11_Rectangulo.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\obj\Debug\11_Rectangulo.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\obj\Debug\11_Rectangulo.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\11_Rectangulo\11_Rectangulo\obj\Debug\11_Rectangulo.pdb

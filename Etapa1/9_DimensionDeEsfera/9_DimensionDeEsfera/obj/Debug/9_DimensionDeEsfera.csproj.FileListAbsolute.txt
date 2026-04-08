@@ -1,0 +1,6 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\bin\Debug\9_DimensionDeEsfera.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\bin\Debug\9_DimensionDeEsfera.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\bin\Debug\9_DimensionDeEsfera.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\obj\Debug\9_DimensionDeEsfera.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\obj\Debug\9_DimensionDeEsfera.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\9_DimensionDeEsfera\9_DimensionDeEsfera\obj\Debug\9_DimensionDeEsfera.pdb

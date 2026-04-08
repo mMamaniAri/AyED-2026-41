@@ -1,0 +1,9 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\bin\Debug\1_Sunombre.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\bin\Debug\1_Sunombre.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\bin\Debug\1_Sunombre.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\obj\Debug\1_Sunombre.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\obj\Debug\1_Sunombre.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\1_Sunombre\1_Sunombre\obj\Debug\1_Sunombre.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\2_SuNombre\1_Sunombre\bin\Debug\1_Sunombre.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\2_SuNombre\1_Sunombre\obj\Debug\1_Sunombre.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\2_SuNombre\1_Sunombre\obj\Debug\1_Sunombre.pdb
