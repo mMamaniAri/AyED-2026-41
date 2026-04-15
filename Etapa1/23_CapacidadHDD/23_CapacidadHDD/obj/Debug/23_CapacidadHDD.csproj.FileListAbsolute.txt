@@ -4,3 +4,9 @@ C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\23_CapacidadHDD\23_CapacidadHDD\
 C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.csprojResolveAssemblyReference.cache
 C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.exe
 C:\Users\Lab AyED\Documents\10_MamaniAri\Etapa0\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\bin\Debug\23_CapacidadHDD.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\bin\Debug\23_CapacidadHDD.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\bin\Debug\23_CapacidadHDD.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa1\23_CapacidadHDD\23_CapacidadHDD\obj\Debug\23_CapacidadHDD.csprojResolveAssemblyReference.cache
