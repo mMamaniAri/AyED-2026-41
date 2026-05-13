@@ -23,6 +23,7 @@ namespace _18_SimuladorJuego
             int busquedaComida;
             int exploracion;
             bool siguienteDia;
+            int ataqueNoche;
             bool derrota = false;
             bool victoria = false;
             while(opcion != 8 && derrota == false && victoria == false)
@@ -36,6 +37,10 @@ namespace _18_SimuladorJuego
                 Console.WriteLine("Vidas: "+vida);
                 Console.WriteLine("Hambre: "+hambre);
                 Console.WriteLine("Material: " + material);
+                Console.WriteLine("Comida cruda: " + comidaCruda);
+                Console.WriteLine("Comida cocida: " + comidaCocida);
+                Console.WriteLine("refugio: " + refugio);
+                Console.WriteLine("fogata: " + fogata);
                 Console.WriteLine("------------------------");
                 Console.WriteLine("Elija que hacer este dia:");
                 Console.WriteLine(" ");
@@ -47,17 +52,6 @@ namespace _18_SimuladorJuego
                 Console.WriteLine("6.Comer comida cocida");
                 Console.WriteLine("7.Descansar");
                 Console.WriteLine("8.Salir");
-                if (vida == 0)
-                {
-                    Console.Clear();
-                    Console.WriteLine("PERDISTE");
-                    derrota = true;
-                }
-                if (dias >= 10 && vida == 10 && hambre == 10)
-                {
-                    Console.WriteLine("¡Has logrado sobrevvir 10 días!");
-                    victoria = true;
-                }
                 opcion = int.Parse(Console.ReadLine());
                 
                 switch (opcion)
@@ -116,22 +110,27 @@ namespace _18_SimuladorJuego
                         }
                         else
                         {
-                            Console.WriteLine("No tienes suficiente material para construir un refugio");
+                            Console.WriteLine("Necesitas 10 de material para construir un refugio");
                             siguienteDia = false;
                         }
                            
                         break;
                     case 4:
-                        if (material >= 4)
+                        if (material >= 4 && fogata == false)
                         {
                             fogata = true;
                             Console.WriteLine("Lograste encender una fogata");
                             Console.WriteLine("Encender la fogata te costó 4 materiales");
                             material = material - 4;
                         }
+                        else if (fogata == true)
+                        {
+                            Console.WriteLine("La fogata ya está encendida");
+                            siguienteDia = false;
+                        }
                         else
                         {
-                            Console.WriteLine("No tienes suficiente material para encender una fogata");
+                            Console.WriteLine("Necesitas 4 de material para encender la fogata");
                             siguienteDia = false;
                         }
                         break;
@@ -202,6 +201,7 @@ namespace _18_SimuladorJuego
                         }
                         break;
                     case 8:
+                        Console.Clear();
                         Console.WriteLine("Cerrando juego...");
                         break;
                     default:
@@ -211,12 +211,27 @@ namespace _18_SimuladorJuego
                 }
                 if (siguienteDia == true)
                 {
+                    if (refugio == false)
+                    {
+                        ataqueNoche = rand.Next(1, 10);
+                        if (ataqueNoche > 6)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Como no tenías refugio, unos lobos te atacaron en la noche");
+                            Console.WriteLine("Perdiste 1 puntos de vida y 1 comida cocida");
+                            vida--;
+                            if (comidaCocida > 0)
+                            {
+                                comidaCocida--;
+                            }
+                            Console.ReadKey();
+                        }
                     dias++;
                     if (hambre == 0)
                     {
                         if (vida > 0)
                         {
-                            vida--;
+                            vida = vida - 2;
                         }
                     }
                     else if (hambre > 0)
@@ -224,11 +239,28 @@ namespace _18_SimuladorJuego
                         hambre = hambre - 2;
                     }
                 }
-                
                 Console.ReadKey();
+                }
+                if (vida <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("PERDISTE");
+                    derrota = true;
+                    Console.ReadKey();
+                }
+                if (dias >= 10 && vida > 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("¡Has logrado sobrevvir 10 días!");
+                    Console.WriteLine("GANASTE");
+                    victoria = true;
+                    Console.ReadKey();
+                }
+                
+
                 Console.Clear();
             }
-            //Console.WriteLine(num);
+            ///-
             
 
         }
