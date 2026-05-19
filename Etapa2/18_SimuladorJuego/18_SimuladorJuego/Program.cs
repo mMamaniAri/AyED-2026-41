@@ -19,7 +19,7 @@ namespace _18_SimuladorJuego
             int comidaCocida = 0;
             bool refugio = false;
             bool fogata = false;
-            int material = 0;
+            int material = 10;
             int busquedaComida;
             int exploracion;
             bool siguienteDia;
@@ -101,7 +101,9 @@ namespace _18_SimuladorJuego
                         if (refugio == false && material >= 10)
                         {
                             Console.WriteLine("Lograste construir un refugio");
+                            Console.WriteLine("Te costó 10 materiales");
                             refugio = true;
+                            material = material - 10;
                         }
                         else if (refugio == true)
                         {
@@ -226,6 +228,7 @@ namespace _18_SimuladorJuego
                             }
                             Console.ReadKey();
                         }
+                    }
                     dias++;
                     if (hambre == 0)
                     {
@@ -238,7 +241,6 @@ namespace _18_SimuladorJuego
                     {
                         hambre = hambre - 2;
                     }
-                }
                 Console.ReadKey();
                 }
                 if (vida <= 0)
@@ -256,13 +258,9 @@ namespace _18_SimuladorJuego
                     victoria = true;
                     Console.ReadKey();
                 }
-                
-
                 Console.Clear();
             }
             ///-
-            
-
         }
     }
 }
