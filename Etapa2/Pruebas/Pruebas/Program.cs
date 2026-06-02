@@ -10,19 +10,34 @@ namespace Pruebas
     {
         static void Main(string[] args)
         {
-            int[] numeros = new int[4];
+            int[] edades = { 18, 21, 19, 23, 16 };
+            int buscado;
+            bool encontrado = false;
+            Console.WriteLine("Ingrese una edad para buscar");
+            buscado = int.Parse(Console.ReadLine());
+            for (int i = 0; i < edades.Length; i++)
+            {
+                if (edades[i] == buscado)
+                {
+                    encontrado = true;
+                }
+            }
+            if (encontrado == false)
+            {
+                Console.WriteLine("La edad no se encuentra en la lista");
+            }
+            else
+            {
+                Console.WriteLine("La edad se encuentra en la lista");
+            }
 
-            numeros[0] = 2;
-            numeros[1] = 4;
-            numeros[2] = 6;
-            numeros[3] = 8;
 
-            Array.Reverse(numeros);
 
-            foreach(int numero in numeros)
+            //Array.Reverse(numeros);
+            /*foreach(int numero in numeros)
             {
                 Console.WriteLine(numero);
-            }
+            }*/
             Console.ReadKey();
 
         }
