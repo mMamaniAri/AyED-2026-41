@@ -14,9 +14,20 @@ namespace _5_CentroPM
             int[] vidasPokemones = new int[6];
             int enLista = 0;
             int siguiente = 0;
+            int elegido;
+            int curacion;
+            int restar;
+            int dañado;
+            int daño;
+            int debilitados;
             while (opcion < 13)
             {
                 opcion = 0;
+                elegido = 0;
+                curacion = 0;
+                restar = 0;
+                dañado = 0;
+                daño = 0;
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine("C E N T R O  P O K É - R E M E D I O");
                 Console.WriteLine("------------------------------------");
@@ -35,36 +46,95 @@ namespace _5_CentroPM
                 Console.WriteLine("11- Ordenar pokemones por vida de mayor a menor");
                 Console.WriteLine("12- Simular ataque enemigo a todo el equipo");
                 Console.WriteLine("13- Salir");
+                Console.WriteLine(enLista);
                 opcion = int.Parse(Console.ReadLine());
                 switch (opcion)
                 {
                     case 1:
-                        {
                             if (enLista < 6)
                             {
                                 Console.Write("Ingrese la vida del pokemon: ");
                                 vidasPokemones[siguiente] = int.Parse(Console.ReadLine());
+                                while (vidasPokemones[siguiente] < 0 || vidasPokemones[siguiente] > 100)
+                                {
+                                    Console.Write("Ingrese la vida del pokemon (entre 0 y 100): ");
+                                    vidasPokemones[siguiente] = int.Parse(Console.ReadLine());                                       
+                                }
                                 Console.WriteLine("Pokemon registrado correctamente en la posición " + siguiente);
                                 siguiente++;
+                                enLista++;
                             }
                             else
                             {
                                 Console.WriteLine("No se pueden registrar más pokemones, el centro está lleno");
                             }
+                            Console.ReadKey();
                             break;
-                        }
                     case 2:
-                        {
-                            for (int i = 0; i < vidasPokemones.Length; i++)
+                            for (int i = 0; i < enLista; i++)
                             {
                                 Console.WriteLine("Pokemon " + (i + 1) + " - Vida: " + vidasPokemones[i]);
                             }
+                            Console.ReadKey();
                             break;
-                        }
+                    case 3:
+                            Console.Write("Ingrese la posición del pokemon a curar (entre 1 y 6): ");
+                            elegido = int.Parse(Console.ReadLine()) - 1;
+                            Console.Write("Ingrese puntos de vida a recuperar: ");
+                            curacion = int.Parse(Console.ReadLine());
+                            vidasPokemones[elegido] = vidasPokemones[elegido] + curacion;
+                            if (vidasPokemones[elegido] > 100)
+                            {
+                                restar = vidasPokemones[elegido] - 100;
+                                vidasPokemones[elegido] = vidasPokemones[elegido] - restar;
+                            }
+                            Console.WriteLine("El pokemón fue curado");
+                            Console.WriteLine("Vida actual: " + vidasPokemones[elegido]);
+                            Console.ReadKey();
+                            break;
+                    case 4:
+                            Console.Write("Ingrese la posición del pokemon atacado: ");
+                            dañado = int.Parse(Console.ReadLine()) - 1;
+                            Console.Write("Ingrese daño recibido: ");
+                            daño = int.Parse(Console.ReadLine());
+                            vidasPokemones[dañado] = vidasPokemones[dañado] - daño;
+                            if (vidasPokemones[dañado] < 0 )
+                            {
+                                vidasPokemones[dañado] = 0;
+                            }
+                            Console.WriteLine("El pokemon recibió daño");
+                            Console.WriteLine("Vida actual: " + vidasPokemones[dañado]);
+                            Console.ReadKey();
+                            break;
+                    case 5:
+                            curacion = 0;
+                            Console.Write("Ingrese puntos de curación general: ");
+                            curacion = int.Parse(Console.ReadLine());
+                            for (int n = 0; n < enLista; n++)
+                            {
+                                vidasPokemones[n] = vidasPokemones[n] + curacion;
+                                if (vidasPokemones[n] > 100)
+                                {
+                                    vidasPokemones[n] = 100;
+                                }
+                            }
+                            Console.WriteLine("Todos los pokemones fueron curados");
+                            Console.ReadKey();
+                            break;
+                    case 6:
+                            for(int x = 0; x < enLista; x++)
+                            {
+                                if (vidasPokemones[x] = 0)
+                                {
+                                    
+                                }
+                            }
+                            break;
                 }
-                Console.ReadKey();
                 Console.Clear();
             }
+            Console.WriteLine("Gracias por utilizar el sistema del Centro Poké-Renedio");
+            Console.ReadKey();
         }
     }
 }
