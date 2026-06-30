@@ -19,7 +19,12 @@ namespace _5_CentroPM
             int restar;
             int dañado;
             int daño;
-            int debilitados;
+            int cantDebilitados;
+            bool debilitados;
+            int mayor = 0;
+            int menor = 0;
+            int indiceMayor;
+            int indiceMenor;
             while (opcion < 13)
             {
                 opcion = 0;
@@ -28,6 +33,9 @@ namespace _5_CentroPM
                 restar = 0;
                 dañado = 0;
                 daño = 0;
+                indiceMayor = 0;
+                debilitados = false;
+                cantDebilitados = 0;
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine("C E N T R O  P O K É - R E M E D I O");
                 Console.WriteLine("------------------------------------");
@@ -124,11 +132,63 @@ namespace _5_CentroPM
                     case 6:
                             for(int x = 0; x < enLista; x++)
                             {
-                                if (vidasPokemones[x] = 0)
+                                if (vidasPokemones[x] == 0)
                                 {
-                                    
+                                    debilitados = true;
                                 }
                             }
+                            if (debilitados == true)
+                            {
+                                Console.WriteLine("Pokemones debilitados:");
+                                for (int p = 0; p < enLista; p++)
+                                {
+                                    if (vidasPokemones[p] == 0)
+                                    {
+                                        Console.WriteLine("Pokemon en posición " + p);
+                                        cantDebilitados = cantDebilitados + 1;
+                                    }
+                                }
+                            Console.WriteLine("Cantidad total de pokemones debilitados: " + cantDebilitados);
+                            }
+                            else
+                            {
+                                Console.WriteLine("No hay pokemones debilitados");
+                            }
+                            Console.ReadKey();
+                            break;
+                    case 7:
+                            for (int z = 0; z < enLista-1; z++)
+                            {
+                                if (vidasPokemones[z] > vidasPokemones[z + 1])
+                                {
+                                    mayor = vidasPokemones[z];
+                                }
+                                else
+                                {
+                                    mayor = vidasPokemones[z+1];   
+                                }
+                                indiceMayor++;
+                            }
+                            Console.WriteLine("El pokemon con la mayor vida está en la posición " + (indiceMayor - 1));
+                            Console.WriteLine(mayor);
+                            Console.ReadKey();
+                            break;
+                    case 8:
+                            for (int z = enLista; z > 1; z--)
+                            {
+                                if (vidasPokemones[z] > vidasPokemones[z - 1])
+                                {
+                                    menor = vidasPokemones[z];
+                                }
+                                else
+                                {
+                                    menor = vidasPokemones[z-1];   
+                                }
+                                indiceMenor = z;
+                            }
+                            Console.WriteLine("El pokemon con la mayor vida está en la posición " + indiceMenor);
+                            Console.WriteLine(mayor);
+                            Console.ReadKey();
                             break;
                 }
                 Console.Clear();

@@ -25,7 +25,7 @@ namespace _17_MiPrimerMenu
                 Console.WriteLine("Elija una opción: ");
                 Console.WriteLine(" ");
                 Console.WriteLine("1.Saludo");
-                Console.WriteLine("2.Producto de dis números");
+                Console.WriteLine("2.Producto de dos números");
                 Console.WriteLine("3.Grados a Kelvin");
                 Console.WriteLine("4.Salir");
                 Console.WriteLine("--------------------------------");
