@@ -10,6 +10,7 @@ namespace _5_CentroPM
     {
         static void Main(string[] args)
         {
+            Random rand = new Random();
             int opcion = 0;
             int[] vidasPokemones = new int[6];
             int enLista = 0;
@@ -22,9 +23,12 @@ namespace _5_CentroPM
             int cantDebilitados;
             bool debilitados;
             int mayor = 0;
-            int menor = 0;
+            int menor = 0; 
             int indiceMayor;
             int indiceMenor;
+            int totalVidas;
+            int promedioVidas;
+            int ataqueRandom;
             while (opcion < 13)
             {
                 opcion = 0;
@@ -34,8 +38,11 @@ namespace _5_CentroPM
                 dañado = 0;
                 daño = 0;
                 indiceMayor = 0;
+                indiceMenor = enLista;
                 debilitados = false;
                 cantDebilitados = 0;
+                totalVidas = 0;
+                promedioVidas = 0;
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine("C E N T R O  P O K É - R E M E D I O");
                 Console.WriteLine("------------------------------------");
@@ -159,42 +166,80 @@ namespace _5_CentroPM
                     case 7:
                             for (int z = 0; z < enLista-1; z++)
                             {
-                                if (vidasPokemones[z] > vidasPokemones[z + 1])
+                                if (vidasPokemones[z] > mayor)
                                 {
                                     mayor = vidasPokemones[z];
+                                    indiceMayor++;
                                 }
-                                else
-                                {
-                                    mayor = vidasPokemones[z+1];   
-                                }
-                                indiceMayor++;
                             }
                             Console.WriteLine("El pokemon con la mayor vida está en la posición " + (indiceMayor - 1));
                             Console.WriteLine(mayor);
                             Console.ReadKey();
                             break;
                     case 8:
-                            for (int z = enLista; z > 1; z--)
+                            menor = 101;
+                            for (int z = (enLista - 1); z > -1; z--)
                             {
-                                if (vidasPokemones[z] > vidasPokemones[z - 1])
+                                if (vidasPokemones[z] < menor)
                                 {
                                     menor = vidasPokemones[z];
+                                    indiceMenor--;
                                 }
-                                else
-                                {
-                                    menor = vidasPokemones[z-1];   
-                                }
-                                indiceMenor = z;
                             }
-                            Console.WriteLine("El pokemon con la mayor vida está en la posición " + indiceMenor);
-                            Console.WriteLine(mayor);
+                            Console.WriteLine("El pokemon con la menor vida está en la posición " + indiceMenor);
+                            Console.WriteLine(menor);
+                            Console.ReadKey();
+                            break;
+                    case 9:
+                            for (int m = 0;m < enLista;m++)
+                            {
+                                totalVidas = totalVidas + vidasPokemones[m];
+                                promedioVidas = totalVidas / enLista;
+                            }
+                            if (promedioVidas <= 30)
+                            {
+                                Console.WriteLine("El equipo está en peligro");
+                            }
+                            else if (promedioVidas > 30 && promedioVidas < 70)
+                            {
+                                Console.WriteLine("El equipo necesita curación");
+                            }
+                            else
+                            {
+                                Console.WriteLine("El equipo está en buen estado");
+                            }
+                            Console.ReadKey();
+                            break;
+                    case 10:
+                            Array.Sort(vidasPokemones,0,enLista);
+                            break;
+                    case 11:
+                            Array.Sort(vidasPokemones);
+                            Array.Reverse(vidasPokemones);
+                            break;
+                    case 12:
+                            ataqueRandom = rand.Next(5, 25);
+                            for (int v = 0; v < enLista; v++)
+                            {
+                                vidasPokemones[v] = vidasPokemones[v] - ataqueRandom;
+                                if (vidasPokemones[v] < 0)
+                                {
+                                    vidasPokemones[v] = 0;
+                                }
+                            }
+                            Console.WriteLine("¡Un pokemon salvaje atacó al equipo!");
+                            Console.WriteLine("Daño recibido por todos: " + ataqueRandom);
+                            Console.WriteLine("Las vidas fueron actualizadas");
+                            Console.ReadKey();
+                            break; 
+                    case 13:
+                            Console.WriteLine("Gracias por utilizar el sistema del Centro Poké-Renedio");
                             Console.ReadKey();
                             break;
                 }
                 Console.Clear();
             }
-            Console.WriteLine("Gracias por utilizar el sistema del Centro Poké-Renedio");
-            Console.ReadKey();
+
         }
     }
 }
