@@ -1,0 +1,6 @@
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\bin\Debug\9_MatrizRotada90.exe.config
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\bin\Debug\9_MatrizRotada90.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\bin\Debug\9_MatrizRotada90.pdb
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\obj\Debug\9_MatrizRotada90.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\obj\Debug\9_MatrizRotada90.exe
+C:\Users\Lab AyED\Documents\10_MamaniAri\AyED-2026-41\Etapa 3\9_MatrizRotada90\9_MatrizRotada90\obj\Debug\9_MatrizRotada90.pdb
