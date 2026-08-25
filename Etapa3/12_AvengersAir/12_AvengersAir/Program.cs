@@ -25,7 +25,7 @@ namespace _12_AvengersAir
                     else if (j == 1)
                     {
                         if (Convert.ToInt16(asientos[i, 0]) < 21)
-                            {
+                        {
                             asientos[i, j] = "Primera Clase";
                         }
                         else if (Convert.ToInt16(asientos[i, 0]) > 39 && Convert.ToInt16(asientos[i, 0]) < 44)
