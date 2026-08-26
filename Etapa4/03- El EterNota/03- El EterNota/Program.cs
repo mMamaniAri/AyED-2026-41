@@ -11,7 +11,7 @@ namespace _03__El_EterNota
         static void Main(string[] args)
         {
             int opcion;
-            int filaActual;
+            int filaActual = 0;
             int[,] refugios = new int [20, 5];
             do
             {
@@ -32,7 +32,45 @@ namespace _03__El_EterNota
                     case 1:
                         for (int j = 0; j < 5; j++)
                         {
-
+                            if (j == 0)
+                            {
+                                Console.WriteLine("Ingrese el código de refugio numérico y único: ");
+                                refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                               
+                            }
+                            else if (j == 1)
+                            {
+                                Console.WriteLine("Ingrese la capacidad máxima que el refugio puede albergar(número entero): ");
+                                refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                            }
+                            else if (j == 2)
+                            {
+                                Console.WriteLine("Ingrrese un número entero que represente la cantidad de suministros disponibles: ");
+                                refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                            }
+                            else if (j == 3)
+                            {
+                                Console.WriteLine("Ingrese el número de zona");
+                                Console.WriteLine("1 = 'NORTE'(Congreso) \n2 = 'SUR'(Constitucion) \n3 = 'OESTE'(Flores) \n4 = 'CENTRAL'(Microcentro)");
+                                refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                                while (refugios[filaActual, j] < 1 || refugios[filaActual, j] > 4)
+                                {
+                                    Console.WriteLine("Zona invàlida, esa parte ya està perdida");
+                                    Console.WriteLine("Ingrese el número de zona");
+                                    Console.WriteLine("1 = 'NORTE'(Congreso) \n2 = 'SUR'(Constitucion) \n3 = 'OESTE'(Flores) \n4 = 'CENTRAL'(Microcentro)");
+                                    refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ingrese 1 si hay personas en el refugio o 2 si no las hay: ");
+                                refugios[filaActual, j] = int.Parse(Console.ReadLine());
+                                while (refugios[filaActual, j] < 1 || refugios[filaActual, j] > 2)
+                                {
+                                    Console.WriteLine("Inválido, ingrese 1 si hay personas en el refugio o 2 si no las hay: ");
+                                    refugios[filaActual, j] = int.Parse(Console.ReadLine());q
+                                }
+                            }
                         }
                         break;
                     case 2:
