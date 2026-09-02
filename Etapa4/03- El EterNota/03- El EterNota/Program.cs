@@ -37,10 +37,10 @@ namespace _03__El_EterNota
                         mostrarRefugios(refugios, filaActual);
                         break;
                     case 3:
-                        // Lógica para ocupar refugio
+                        ocuparRefugio(refugios, filaActual, opcion);
                         break;
                     case 4:
-                        // Lógica para mostrar ocupados
+                        refugiosOcupados(refugios, filaActual);
                         break;
                     case 5:
                         // Lógica para refugio con más suministros
@@ -133,16 +133,52 @@ namespace _03__El_EterNota
                 Console.WriteLine();
             }
         }
-        static void ocuparRefugio(int [,] refugios, int filaActual)
+        static void ocuparRefugio(int [,] refugios, int filaActual, int opcion)
         {
+            Console.WriteLine("Refugios diponibles: ");
             for (int i = 0; i < filaActual; i++)
             {
-                Console.Write("Refugio " + (i + 1) + " : ");
-                for (int j = 0; j < refugios.GetLength(1); j++)
+                if (refugios[i, 4] != 1)
                 {
-                    Console.Write(refugios[i, j] + " ");
+                    Console.Write("Refugio " + (i + 1) + " : ");
+                    for (int j = 0; j < refugios.GetLength(1); j++)
+                    {
+                        Console.Write(refugios[i, j] + " ");
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+            }
+            Console.Write("Seleccione el refugio que quiere ocupar: ");
+            opcion = (int.Parse(Console.ReadLine())) - 1;
+            while (refugios[opcion, 4] != 0 || opcion > filaActual)
+            {
+                if (refugios[opcion, 4] != 0)
+                {
+                    Console.Write("No somos Okupas, esto ya està ocupado, seleccioine el refugio que quiere ocupar: ");
+                    opcion = (int.Parse(Console.ReadLine())) - 1;
+                }
+                if (opcion > filaActual - 1)
+                {
+                    Console.Write("Refugio no registrado, seleccione el refugio que quiere ocupar: ");
+                    opcion = (int.Parse(Console.ReadLine())) - 1;
+                }
+            }
+            refugios[opcion, 4] = 1;
+        }
+        static void refugiosOcupados(int [,] refugios, int filaActual)
+        {
+            Console.WriteLine("Refugios ocupados: ");
+            for (int i = 0; i < filaActual; i++)
+            {
+                if (refugios[i, 4] != 0)
+                {
+                    Console.Write("Refugio " + (i + 1) + " : ");
+                    for (int j = 0; j < refugios.GetLength(1); j++)
+                    {
+                        Console.Write(refugios[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
             }
         }
     }
