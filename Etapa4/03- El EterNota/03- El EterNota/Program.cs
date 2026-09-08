@@ -12,6 +12,7 @@ namespace _03__El_EterNota
         {
             int opcion;
             int filaActual = 0;
+            int mayor = 0;
             int[,] refugios = new int [20, 5];
             do
             {
@@ -43,7 +44,7 @@ namespace _03__El_EterNota
                         refugiosOcupados(refugios, filaActual);
                         break;
                     case 5:
-                        // Lógica para refugio con más suministros
+                        masSuministros(refugios, filaActual, mayor);
                         break;
                     case 6:
                         // Lógica para promedio por zona
@@ -180,6 +181,39 @@ namespace _03__El_EterNota
                     Console.WriteLine();
                 }
             }
+        }
+        static void masSuministros(int[,] refugios, int filaActual, int mayor)
+        {
+            int contador = 0;
+            Console.WriteLine("Refugio con más suministros: ");
+            for (int i = 0; i < filaActual; i++)
+            {
+                if (refugios[i, 2] > mayor)
+                {
+                    mayor = refugios[i, 2];
+                }
+            }
+            for (int i = 0; i < filaActual; i++)
+            {
+                if (refugios[i, 2] == mayor)
+                {
+                    contador++;
+                    Console.Write("Refugio " + (i + 1) + " : ");
+                    for (int j = 0; j < refugios.GetLength(1); j++)
+                    {
+                        Console.Write(refugios[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            if (contador > 1)
+            {
+                Console.WriteLine("Hay más de un refugio con la mayor cantidad de suministros");
+            }
+        }
+        static void promedioZona(int [,] refugios, int filaActual)
+        {
+
         }
     }
 }
