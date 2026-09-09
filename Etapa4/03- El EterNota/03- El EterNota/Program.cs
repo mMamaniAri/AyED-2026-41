@@ -213,7 +213,33 @@ namespace _03__El_EterNota
         }
         static void promedioZona(int [,] refugios, int filaActual)
         {
-
+            int totalNorte = 0;
+            int totalSur = 0;
+            int totalOeste = 0;
+            int totalCentro = 0;
+            int promedioNorte = 0;
+            int promedioSur = 0;
+            int promedioOeste = 0;
+            int promedioCentro = 0;
+            for (int i = 0; i < filaActual; i++)
+            {
+                if (refugios[i, 3] == 1)
+                {
+                    totalNorte = totalNorte + refugios[i, 3];
+                }
+                else if (refugios[i, 3] == 2)
+                {
+                    totalSur = totalSur + refugios[i, 3];
+                }
+                else if (refugios[i, 3] == 3)
+                {
+                    totalOeste = totalOeste + refugios[i, 3];
+                }
+                else if (refugios[i, 3] == 4)
+                {
+                    totalCentro = totalCentro + refugios[i, 3];
+                }
+            }
         }
     }
 }
