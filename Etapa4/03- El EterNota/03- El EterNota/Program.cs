@@ -47,10 +47,10 @@ namespace _03__El_EterNota
                         masSuministros(refugios, filaActual, mayor);
                         break;
                     case 6:
-                        // Lógica para promedio por zona
+                        promedioZona(refugios, filaActual);
                         break;
                     case 7:
-                        // Lógica para filtrar por zona
+                        refugioZona(refugios, filaActual);
                         break;
                     case 8:
                         Console.WriteLine("Saliendo del sistema... ¡Que la nevada no te atrape!");
@@ -211,7 +211,7 @@ namespace _03__El_EterNota
                 Console.WriteLine("Hay más de un refugio con la mayor cantidad de suministros");
             }
         }
-        static void promedioZona(int [,] refugios, int filaActual)
+        static void promedioZona(int[,] refugios, int filaActual)
         {
             int totalNorte = 0;
             int totalSur = 0;
@@ -221,24 +221,71 @@ namespace _03__El_EterNota
             int promedioSur = 0;
             int promedioOeste = 0;
             int promedioCentro = 0;
+            int cantNorte = 0;
+            int cantSur = 0;
+            int cantOeste = 0;
+            int cantCentro = 0;
             for (int i = 0; i < filaActual; i++)
             {
                 if (refugios[i, 3] == 1)
                 {
-                    totalNorte = totalNorte + refugios[i, 3];
+                    totalNorte = totalNorte + refugios[i, 1];
+                    cantNorte++;
                 }
                 else if (refugios[i, 3] == 2)
                 {
-                    totalSur = totalSur + refugios[i, 3];
+                    totalSur = totalSur + refugios[i, 1];
+                    cantSur++;
                 }
                 else if (refugios[i, 3] == 3)
                 {
-                    totalOeste = totalOeste + refugios[i, 3];
+                    totalOeste = totalOeste + refugios[i, 1];
+                    cantOeste++;
                 }
                 else if (refugios[i, 3] == 4)
                 {
-                    totalCentro = totalCentro + refugios[i, 3];
+                    totalCentro = totalCentro + refugios[i, 1];
+                    cantCentro++;
                 }
+            }
+            if (cantNorte > 0)
+            {
+                promedioNorte = totalNorte / cantNorte;
+            }
+            else if (cantSur > 0)
+            {
+                promedioSur = totalSur / cantSur;
+            }
+            else if (cantOeste > 0)
+            {
+                promedioOeste = totalOeste / cantOeste;
+            }
+            else if (cantCentro > 0)
+            {
+                promedioCentro = totalCentro / cantCentro;
+            }
+            Console.WriteLine("NORTE(Congreso): " + promedioNorte);
+            Console.WriteLine("SUR(Constitución): " + promedioSur);
+            Console.WriteLine("OESTE(Flores): " + promedioOeste);
+            Console.WriteLine("CENTRO(Microcentro): " + promedioCentro);
+        }
+        static void refugioZona(int [,] refugios, int filaActual)
+        {
+            int zonaElegida = 0;
+            Console.WriteLine("1 = 'NORTE'(Congreso) \n2 = 'SUR'(Constitucion) \n3 = 'OESTE'(Flores) \n4 = 'CENTRAL'(Microcentro)");
+            Console.Write("Ingrese la zona que quiera ver: ");
+            zonaElegida = int.Parse(Console.ReadLine());
+            for (int i = 0; i < filaActual; i++)
+            {
+                if(refugios[i, 3] == zonaElegida)
+                {
+                    Console.Write("Refugio " + (i + 1) + " : ");
+                    for (int j = 0; j < refugios.GetLength(1); j++)
+                    {
+                        Console.Write(refugios[i, j] + " ");
+                    }
+                }
+                Console.WriteLine();
             }
         }
     }
