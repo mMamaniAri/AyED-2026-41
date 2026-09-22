@@ -10,13 +10,13 @@ namespace _12_AvengersAir
     {
         static void Main(string[] args)
         {
-            string[,] asientos = new string[80, 8];
+            string[,] asientos = new string[80, 9];
             int opcion = 0;
             int disponibles = 80;
             int ocupados = 0;
             for (int i = 0; i < 80; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < 9; j++)
                 {
                     if (j == 0)
                     {
@@ -31,6 +31,10 @@ namespace _12_AvengersAir
                         else if (Convert.ToInt16(asientos[i, 0]) > 39 && Convert.ToInt16(asientos[i, 0]) < 44)
                         {
                             asientos[i, j] = "Salida de emergencia";
+                        }
+                        else
+                        {
+                            asientos[i, j] = "Económica";
                         }
                     }
                     else if (j < 7 && j > 1)
@@ -74,7 +78,7 @@ namespace _12_AvengersAir
                 Console.WriteLine();
                 Console.Write("Ingrese la opción deseada: ");
                 opcion = int.Parse(Console.ReadLine());
-                /*----------
+                /*------------
                 0 - Numero de asiento
                 1- tipo de asiento
                 2- nombre
@@ -88,17 +92,41 @@ namespace _12_AvengersAir
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("N° Asiento tipo nombre apellido edad DNI nacionalidad ocupado");
+                        Console.WriteLine("N° Asiento tipo");
                         for (int i = 0; i < 80; i++)
                         {
-                            for (int j = 0; j < 8; j++)
+                            if (asientos[i, 8] == "false")
                             {
-                                Console.Write(asientos[i, j] + " ");
+                                for (int j = 0; j < 9; j++)
+                                {
+                                    Console.Write(asientos[i, j] + " ");
+                                }
+                                Console.WriteLine();
                             }
-                            Console.WriteLine();
                         }
+                        Console.Write("Ingrese el asiento que quiere ocupar: ");
+                        opcion = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese su nombre: ");
+                        asientos[opcion, 2] = Console.ReadLine();
+                        Console.Write("Ingrese su apellido: ");
+                        asientos[opcion, 3] = Console.ReadLine();
+                        Console.Write("Ingrese su edad: ");
+                        asientos[opcion, 4] = Console.ReadLine();
+                        Console.Write("Ingrese su DNI: ");
+                        asientos[opcion, 5] = Console.ReadLine();
+                        Console.Write("Ingrese su nacionalidad: ");
+                        asientos[opcion, 6] = Console.ReadLine();
+                        Console.Write("Ingrese el estado de ocupación del asiento(ocupado = true libre = false): ");
+                        asientos[opcion, 7] = Console.ReadLine();
+                        asientos[opcion, 8] = "true";
                         break;
                     case 2:
+                        Console.Write("Ingrese el asiento que quiere devolver: ");
+                        opcion = int.Parse(Console.ReadLine());
+                        for (int j = 2; j < 7; j++)
+                        {
+                            asientos[opcion, j] = "vacio";
+                        }
                         break;
                     case 3:
                         break;
@@ -115,7 +143,6 @@ namespace _12_AvengersAir
                 Console.Clear();
             }
             
-            Console.ReadKey();
         }
     }
 }
