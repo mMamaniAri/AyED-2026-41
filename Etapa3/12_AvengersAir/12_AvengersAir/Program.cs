@@ -134,7 +134,7 @@ namespace _12_AvengersAir
                         asientos[opcion, 6] = Console.ReadLine();
                         Console.Write("Ingrese el estado de ocupación del asiento(ocupado = true / libre = false): ");
                         asientos[opcion, 7] = Console.ReadLine();
-                        while (asientos[opcion, 7] != "true" || asientos[opcion, 7] != "false")
+                        while (asientos[opcion, 7] != "true" && asientos[opcion, 7] != "false")
                         {
                             Console.Write("Respuesta inválida, ingrese el estado de ocupación del asiento(ocupado = true / libre = false): ");
                             asientos[opcion, 7] = Console.ReadLine();
