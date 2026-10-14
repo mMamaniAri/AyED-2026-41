@@ -38,30 +38,37 @@ namespace _13___PERO
                 switch (opcion)
                 {
                     case 1:
-                        misiones[filaActual, 0] = filaActual + 1;
-                        //-
-                        Console.WriteLine("Ingrese el mapa de la misión: \n- 1 = Hagwarts \n- 2 = La Casa del Viejo \n- 3 = El Laboratorio");
-                        misiones[filaActual, 1] = int.Parse(Console.ReadLine());
-                        while (misiones[filaActual, 1] < 1 || misiones[filaActual, 1] > 3)
+                        if (filaActual < 30)
                         {
-                            Console.WriteLine("Inválido, ingrese el mapa de la misión: \n- 1 = Hagwarts \n- 2 = La Casa del Viejo \n- 3 = El Laboratorio");
+                            misiones[filaActual, 0] = filaActual + 1;
+                            //-
+                            Console.WriteLine("Ingrese el mapa de la misión: \n- 1 = Hagwarts \n- 2 = La Casa del Viejo \n- 3 = El Laboratorio");
                             misiones[filaActual, 1] = int.Parse(Console.ReadLine());
-                        }
-                        //-
-                        misiones[filaActual, 2] = rand.Next(1, 70);
-                        //-
-                        Console.Write("Ingrese el nivel de peligro(número entre 1(bajo) y 5(muerte segura)): ");
-                        misiones[filaActual, 3] = int.Parse(Console.ReadLine());
-                        while (misiones[filaActual, 3] < 1 || misiones[filaActual, 3] > 5)
-                        {
-                            Console.Write("Inválido, ingrese el nivel de peligro(número entre 1(bajo) y 5(muerte segura)): ");
+                            while (misiones[filaActual, 1] < 1 || misiones[filaActual, 1] > 3)
+                            {
+                                Console.WriteLine("Inválido, ingrese el mapa de la misión: \n- 1 = Hagwarts \n- 2 = La Casa del Viejo \n- 3 = El Laboratorio");
+                                misiones[filaActual, 1] = int.Parse(Console.ReadLine());
+                            }
+                            //-
+                            misiones[filaActual, 2] = rand.Next(1, 70);
+                            //-
+                            Console.Write("Ingrese el nivel de peligro(número entre 1(bajo) y 5(muerte segura)): ");
                             misiones[filaActual, 3] = int.Parse(Console.ReadLine());
+                            while (misiones[filaActual, 3] < 1 || misiones[filaActual, 3] > 5)
+                            {
+                                Console.Write("Inválido, ingrese el nivel de peligro(número entre 1(bajo) y 5(muerte segura)): ");
+                                misiones[filaActual, 3] = int.Parse(Console.ReadLine());
+                            }
+                            //-
+                            misiones[filaActual, 4] = 0;
+                            //-
+                            filaActual++;
+                            // Punto 1: Registrar nueva misión
                         }
-                        //-
-                        misiones[filaActual, 4] = 0;
-                        //-
-                        filaActual++;
-                        // Punto 1: Registrar nueva misión
+                        else
+                        {
+                            Console.WriteLine("¡Demasiadas misiones!");
+                        }
                         break;
                     case 2:
                         for (int i = 0; i < filaActual; i++)
@@ -103,7 +110,7 @@ namespace _13___PERO
                         break;
                     case 5:
                         //mayor = 0;
-                        for(int i = 0; i < filaActual; i++)
+                        for (int i = 0; i < filaActual; i++)
                         {
                             if (misiones[i, 2] > mayor)
                             {
@@ -125,38 +132,78 @@ namespace _13___PERO
                         // Punto 5: Misión con más objetos a extraer
                         break;
                     case 6:
+                        prom1 = 0;
+                        prom2 = 0;
+                        prom3 = 0;
+                        cant1 = 0;
+                        cant2 = 0;
+                        cant3 = 0;
                         for (int i = 0; i < filaActual; i++)
                         {
                             if (misiones[i, 1] == 1)
                             {
                                 prom1 = prom1 + misiones[i, 1];
+                                cant1++;
                             }
-                            cant1++;
-                        }
-                        for (int i = 0; i < filaActual; i++)
-                        {
                             if (misiones[i, 1] == 2)
                             {
                                 prom2 = prom2 + misiones[i, 1];
+                                cant2++;
                             }
-                            cant2++;
+                            if (misiones[i, 1] == 3)
+                            {
+                                prom3 = prom3 + misiones[i, 1];
+                                cant3++;
+                            }
                         }
+                        Console.WriteLine(prom1);
+                        if (cant1 != 0)
+                        {
+                            prom1 = prom1 / cant1;
+                        }
+                        Console.WriteLine(cant1);
+                        Console.WriteLine(prom1);
+         
+                        Console.WriteLine(prom2);
+                        if (cant2 != 0)
+                        {
+                            prom2 = prom2 / cant2;
+                        }
+                        Console.WriteLine(cant2);
+                        Console.WriteLine(prom2);
                         for (int i = 0; i < filaActual; i++)
                         {
                             if (misiones[i, 1] == 3)
                             {
                                 prom3 = prom3 + misiones[i, 1];
+                                cant3++;
                             }
-                            cant3++;
                         }
+                        Console.WriteLine(prom3);
+                        if (cant3 != 0)
+                        {
+                            prom1 = prom3 / cant3;
+                        }
+                        Console.WriteLine(cant3);
+                        Console.WriteLine(prom3);
                         // Punto 6: Promedio de peligro por mapa
                         break;
                     case 7:
+                        Console.WriteLine("rellenar");
+                        for (int i = 0; i < 30; i++)
+                        {
+                            misiones[i, 0] = i + 1;
+                            misiones[i, 1] = rand.Next(1, 4);
+                            misiones[i, 2] = rand.Next(1, 71);
+                            misiones[i, 3] = rand.Next(1, 6);
+                            misiones[i, 4] = 0;
+                        }
+                        filaActual = 30;
                         // Punto 7: Filtrar por mapa
                         break;
                     case 8:
                         Console.WriteLine("Saliendo del sistema... ¡Esperemos que el PERO no sea letal!");
-                break;
+                        break;
                     default:
                         Console.WriteLine("Opción no válida. Intente de nuevo.");
                         break;
