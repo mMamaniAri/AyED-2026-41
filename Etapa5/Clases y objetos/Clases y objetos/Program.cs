@@ -14,7 +14,7 @@ namespace clase
         public static void Main()
         {
             Mate mateFran = new Mate(200, 4, 10, "Madera", true, true);
-
+            mateFran.cebar();
             Mate mateMetal = new Mate(100, 3, 12, "Metal", false, false);
 
             Mate mateRojo = new Mate(180, 4, 12, "Vidrio", false, false);
